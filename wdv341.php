@@ -25,7 +25,7 @@
 		echo '<a href = "phpBasics.php">PHP Basics</a><br>';
 		echo '<a href = "phpFunctions.php">PHP Functions</a><br>';
 		echo '<a href = "testEmailer.php">PHP Test Emailer</a><br>';
-		echo '<a href = "exampleForm.html">PHP Forms</a><br>';
+		echo '<a href = "exampleForm.html">PHP Form Handler</a><br>';
 		
 	?>
 	
