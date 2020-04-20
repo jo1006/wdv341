@@ -1,0 +1,38 @@
+	<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<script>
+
+	function getProductObject() { //do not need to change any of this
+//ajax calls in jquery has the word .ajax in its call
+		alert("insideGetProductObject()");
+
+		var xmlhttp = new XMLHttpRequest();
+		xmlhttp.onreadystatechange = function() { //state goes from 0(create obj) 4(completed)
+		  if (this.readyState == 4 && this.status == 200) { //status of 200 successful
+			  console.log(this.responseText);  
+			var myObj = JSON.parse(this.responseText); //take from json and putting into javascript stored in myObj
+			document.getElementById("displayProduct").innerHTML = myObj.productName; //put value in field on browser
+		  }
+		};
+		xmlhttp.open("GET", "deliverProduct.php", true);  //
+		xmlhttp.send();		//starts process
+		
+	}
+
+
+
+</script>
+
+</head>
+
+<body>
+<h1>WDV341 Intro PHP</h1>
+<h2>PHP-JSON-AJAX Example</h2>
+<p>This page will use AJAX to call for a PHP page on your server. The PHP page will create a JSON object and 'send' it back to this page where it will be consumed by the page and the contents displayed.</p>
+<p>Product Information: <span id="displayProduct"></span></p>
+<p><button onClick="getProductObject()">Display Product</button></p>
+</body>
+</html>
