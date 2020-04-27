@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<title>WDV341 Intro PHP - Insert into Database</title>
+</head>
+
+<body>
+<h1>WDV341 Intro PHP - Insert Data</h1>
+
+<form id="form1" name="form1" method="post" action="insertEvents.php">
+
+
+  <p>Event Name: 
+    <input type="text" name="eventName" id="eventName" />
+</p>
+  <p>Event Description: 
+    <input type="text" name="eventDescription" id="eventDescription" />
+  </p>
+  <p>Event Presenter: 
+    <input type="text" name="eventPresenter" id="eventPresenter" />
+  </p>
+  <p>Event Date: 
+    <input type="date" name="eventDate" id="eventDate" />   
+     Event Time:
+    <input type="time" name="eventTime" id="eventTime" />
+  </p>
+
+  <div class="g-recaptcha" data-sitekey="6LfmJt4UAAAAANwyqC_iJXroQ1__C1zJ5Z1ryKOK"></div>
+
+  <p>
+    <input type="submit" name="button" id="button" value="Submit" />
+    <input type="reset" name="button2" id="button2" value="Reset" />
+  </p>
+</form>
+
+<p>&nbsp;</p>
+</body>
+
+</html>
